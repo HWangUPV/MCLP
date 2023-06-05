@@ -34,9 +34,9 @@ namespace MCLP2023
 
         public static void WriteToTxtForSrting(string[] str, string path)
         {
-            //if (!File.Exists(path))//判断文件是否存在，注释则每次都覆盖原文件
+            //if (!File.Exists(path))//if file exist
             {
-                var fsc = new FileStream(path, FileMode.Create, FileAccess.Write);//若文件不存在，创建TXT文件
+                var fsc = new FileStream(path, FileMode.Create, FileAccess.Write);//if not exist
                 fsc.Close();
             }
             System.IO.File.WriteAllLines(path, str);
