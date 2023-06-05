@@ -40,7 +40,7 @@ namespace aMCLP2023
         }
 
 
-        public static bool ifCover(List<(double, double)> coodinate, double radius, int i, int j) //判断两点是否相互覆盖
+        public static bool ifCover(List<(double, double)> coodinate, double radius, int i, int j) //if cover
         {
             bool cover = false;
             if ((coodinate[i].Item1 - coodinate[j].Item1) * (coodinate[i].Item1 - coodinate[j].Item1) + (coodinate[i].Item2 - coodinate[j].Item2) * (coodinate[i].Item2 - coodinate[j].Item2) <= radius * radius)
@@ -52,7 +52,7 @@ namespace aMCLP2023
         }
 
 
-        public static bool ifCover(double[,] distance, double radius, int i, int j) //判断两点是否相互覆盖
+        public static bool ifCover(double[,] distance, double radius, int i, int j) //if cover
         {
             bool cover = false;
             if (distance[i, j] <= radius)
