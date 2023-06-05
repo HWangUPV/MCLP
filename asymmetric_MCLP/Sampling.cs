@@ -15,14 +15,14 @@ namespace aMCLP2023
         /// <param name="r"></param> value of radius
         /// <param name="K"></param> number of selected sites
         /// <returns></returns>
-        public static List<int> PPS_SamplingForK(List<double> ProbList, Random r, int K)// 不重复概率抽样K个////同matlab
+        public static List<int> PPS_SamplingForK(List<double> ProbList, Random r, int K)// without replacement for K numbers
         {
             int N = ProbList.Count;
             List<int> selectedElement = new List<int>();
             double[] OldsRatio = new double[N];
             for (int i = 0; i < N; i++)
             {
-                double RandDouble = r.NextDouble(); // 需要每次都抽样
+                double RandDouble = r.NextDouble(); // radomness is required
                 OldsRatio[i] = (double)(Math.Exp(Math.Log(RandDouble) - Math.Log(1 - RandDouble) + Math.Log(1 - ProbList[i]) - Math.Log(ProbList[i])));
             }
 
@@ -54,7 +54,7 @@ namespace aMCLP2023
         /// <param name="itkeep"></param> How many iterations the best solution kept
         /// <param name="Cmax"></param> parameter Cmax
         /// <returns></returns>
-        public static List<double> UpdateProb(Random rand, List<(List<int> loc, double obj)> SlutionList, List<double> prob_Ori, double alpha, int K, int selectedNum, int itkeep, int Cmax)// 根据筛选出的location 更新概率
+        public static List<double> UpdateProb(Random rand, List<(List<int> loc, double obj)> SlutionList, List<double> prob_Ori, double alpha, int K, int selectedNum, int itkeep, int Cmax)// update probability
         {
             double[] Prob = new double[prob_Ori.Count];
             for (int i = 0; i < selectedNum; i++)
@@ -126,7 +126,7 @@ namespace aMCLP2023
 
 
 
-        public static double[] InitializationAlpha(Random rand, double[] Prob, List<double> prob_Ori, double alpha, int itkeep, int Cmax)// 概率归一化,alpha
+        public static double[] InitializationAlpha(Random rand, double[] Prob, List<double> prob_Ori, double alpha, int itkeep, int Cmax)// initiallize with alpha
         {
             double sum = Prob.Sum();
 
