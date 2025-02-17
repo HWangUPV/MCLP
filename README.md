@@ -1,5 +1,5 @@
 # Cross Entropy Method for the Maximal Covering Location Problem (MCLP)
-Cross Entropy Method for the Maximal Covering Location Problem
+Cross-entropy Method for the Maximal Covering Location Problem
 
 Programming language: C#
 
@@ -7,6 +7,7 @@ All data involved in this work are attached and Ziped (see, MCLP_Benchmark_Insta
 
 Some of the original data links are also available at the website http://www.lac.inpe.br/~lorena/instancias.html (SJC), http://www.https://sites.google.com/site/nascimentomcv/downloads/mclp (Maximo), https://github.com/fabiofurini/LocationCovering (BDS).
 
+More information about this work can be found in this [depositary.](https://github.com/INFORMSJoC/2024.0611)
 
 
 
