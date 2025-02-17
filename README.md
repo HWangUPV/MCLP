@@ -1,4 +1,4 @@
-# Cross Entropy Method for the Maximal Covering Location Problem (MCLP)
+# Cross-entropy Method for the Maximal Covering Location Problem (MCLP)
 Cross-entropy Method for the Maximal Covering Location Problem
 
 Programming language: C#
